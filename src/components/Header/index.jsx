@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <Container>
         <Title>todo</Title>
-        <Add />
+        <Add className="button-add" />
     </Container>
   );
 }
