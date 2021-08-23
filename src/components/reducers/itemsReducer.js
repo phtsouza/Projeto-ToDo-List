@@ -4,11 +4,11 @@ const allItems = [
       text: "Comprar pão, carne, salada, maçã, uva e café",
       categories: [
         {
-          color: "#ff0",
+          color: "#FFD700",
           title: "compras"
         },
         {
-            color: "#00ff00",
+            color: "#D8BFD8",
             title: "escola"
         }
       ]

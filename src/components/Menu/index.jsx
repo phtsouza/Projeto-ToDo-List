@@ -11,13 +11,13 @@ export default function Menu(){
     <Container>
       <ul>
         {categories.map((ct, i) => 
-          <Category color={ct.color} >
+          <Category key={i} color={ct.color} >
             <div />
             <span>{ct.title}</span>
           </Category>
         )}
       </ul>
-      <iframe src="https://giphy.com/embed/l29PIblmcraLOowHnR" width="200" height="200" frameBorder="0" class="giphy-embed"></iframe>
+      <iframe src="https://giphy.com/embed/l29PIblmcraLOowHnR" width="200" height="200" frameBorder="0" />
     </Container>
     
   );

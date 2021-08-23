@@ -1,14 +1,14 @@
 const allCategories = [
   {
-    color: "#ff0",
+    color: "#FFD700",
     title: "compras"
   },
   {
-    color: "#0000ff",
+    color: "#B0E0E6",
     title: "casa"
   },
   {
-    color: "#00ff00",
+    color: "#D8BFD8",
     title: "escola"
   }
 ]

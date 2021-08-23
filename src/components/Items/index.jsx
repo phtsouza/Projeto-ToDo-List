@@ -10,7 +10,7 @@ export default function Item() {
 
   return (
     <Container>
-      {items.map((item, i) => <SingleCard key={i} item={item}/>)}
+      {items.map((item, i) => <SingleCard key={i} index={i} item={item}/>)}
     </Container>
   );
 }
