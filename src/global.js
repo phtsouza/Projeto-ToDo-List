@@ -1,9 +1,10 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   :root {
     --background: #f0f2f5;
-    --red: #E52E4D;
+    --background-card: #fff9de;
+    --check: #333;
     --blue: #5429CC;
     --blue-light: #9633FF;
     --text-title: #363F5F;
@@ -30,7 +31,7 @@ export const GlobalStyle = createGlobalStyle`
   // REM = 1rem = 16px => sempre usaremos rem para responsividade
   
   body {
-    background: var(---background);
+    background: var(--background);
     -webkit-font-smoothing: antialiased;
     font-family: 'Poppins', sans-serif;
   }
@@ -43,4 +44,11 @@ export const GlobalStyle = createGlobalStyle`
     opacity: 0.6;
     cursor: not-allowed;
   }
+`;
+
+export const Content = styled.div`
+  max-width: 1120px;
+  margin: 1.25rem auto 0;
+  display: flex;
+  align-items: flex-start;
 `;
