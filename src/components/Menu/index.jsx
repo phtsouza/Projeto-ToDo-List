@@ -1,23 +1,10 @@
 import { useState } from "react";
 import { Container, Category } from "./styles";
-
-const allCategories = [
-  {
-    color: "#ff0",
-    title: "casa"
-  },
-  {
-    color: "#0000ff",
-    title: "trabalho"
-  },
-  {
-    color: "#00ff00",
-    title: "escola"
-  }
-]
+import { useSelector, useDispatch } from "react-redux";
 
 export default function Menu(){
 
+  const allCategories = useSelector((state) => state.categories);
   const [categories, setCategories] = useState(allCategories);
 
   return(
@@ -30,6 +17,8 @@ export default function Menu(){
           </Category>
         )}
       </ul>
+      <iframe src="https://giphy.com/embed/l29PIblmcraLOowHnR" width="200" height="200" frameBorder="0" class="giphy-embed"></iframe>
     </Container>
+    
   );
 }

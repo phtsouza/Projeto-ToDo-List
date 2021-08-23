@@ -1,9 +1,17 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: space-between;
+  height: 80vh;
   & ul {
     list-style: none;
-    width: 200px;
+    width: 125px;
+  }
+  & iframe {
+    transform: translateX(-50%)
   }
 `;
 

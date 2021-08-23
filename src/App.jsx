@@ -1,18 +1,30 @@
 import { GlobalStyle, Content } from "./global";
 import Header from "./components/Header";
-import Itens from "./components/Itens";
+import Items from "./components/Items";
 import Menu from "./components/Menu";
+import { createStore, combineReducers } from "redux";
+import categoriesReducer from "./components/reducers/categoriesReducer";
+import itemsReducer from "./components/reducers/itemsReducer";
+import { Provider } from "react-redux";
 
 export default function App() {
   
+  const allReducers = combineReducers({
+    categories: categoriesReducer,
+    items: itemsReducer
+  });
+  const store = createStore(allReducers);
+
   return (
     <>
       <GlobalStyle />
-      <Header />
-      <Content>
-        <Menu />
-        <Itens />
-      </Content>
+      <Provider store={store}>
+        <Header />
+        <Content>
+          <Menu />
+          <Items />
+        </Content>
+      </Provider>
     </>
 
   );
