@@ -25,7 +25,7 @@ export default function Header() {
           isOpen={isNewTaskModalOpen}
           onRequestClose={handleCloseNewTaskModal}
         >
-          <h2>Pedro Baitola</h2>
+          <h2>Modal</h2>
         </Modal>
     </Container>
   );
