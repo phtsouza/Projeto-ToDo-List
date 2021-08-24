@@ -16,11 +16,11 @@ const allItems = [
 ]
 
 
-export default function categoriesReducer(state = allItems, action) {
+export default function itemsReducer(state = allItems, action) {
   switch (action.type) {
-    case 'ADD':
-      return 0;
-    case 'REMOVE':
+    case 'ADD_ITEM':
+      return [...state, action.payload];
+    case 'REMOVE_ITEM':
       return 0;
     default:
       return state;

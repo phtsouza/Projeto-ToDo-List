@@ -62,17 +62,54 @@ export const CampInput = styled.div`
       padding: .7rem;
       border: none;
       border-radius: .5rem;
-      filter: brightness(0.97);
+      background: #33333322;
     }
 
     & input {
       padding: .7rem;
       border: none;
       border-radius: .5rem;
-      filter: brightness(0.97);
+      background: #33333322;
     }
 `;
 
 export const CampCategory = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+`;
 
+export const ContainerCategory = styled.div`
+  .check-category {
+    display: none;
+  }
+`;
+
+export const CategoryCheck = styled.label`
+  padding: .5rem 1rem;
+  margin: .2rem .2rem 0;
+  border-radius: .5rem;
+  display: flex;
+  background: ${props => props.isCheck ? "#32323233" : ""};
+  transition: all .2s;
+  & label {
+    display: flex;
+    :hover {
+      cursor: pointer;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    background: #33333322;
+  }
+`;
+
+export const Ball = styled.div`
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  margin: 0 .1rem 0 0;
+  background-color: ${props => props.color};
 `;
