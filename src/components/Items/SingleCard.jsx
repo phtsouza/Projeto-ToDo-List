@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Check from "../Svgs/Check"
 import { Card, Title, Text, Categories, Colors } from './styles';
 
-export default function SingleCard({item, key}) {
+export default function SingleCard({item, index}) {
 
   const [checkboxIsCheck, setCheckboxIsCheck] = useState(false);
   
@@ -19,12 +19,12 @@ export default function SingleCard({item, key}) {
           <Colors color={ct.color}></Colors>
         )}
         </Categories>
-        <label htmlFor={item.title + key} onClick={handleCheckbox} >
+        <label htmlFor={item.title + index} onClick={handleCheckbox} >
           <div className={checkboxIsCheck ? "checkbox checked" : "checkbox"} checkboxIsCheck={checkboxIsCheck}>
             <Check />
           </div>
         </label>
-        <input type="checkbox" name={item.title + key} id={item.title + key} /> 
+        <input type="checkbox" name={item.title + index} id={item.title + index} /> 
       </div>
 
     </Card>

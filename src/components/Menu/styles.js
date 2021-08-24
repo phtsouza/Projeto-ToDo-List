@@ -8,16 +8,17 @@ export const Container = styled.div`
   height: 80vh;
   & ul {
     list-style: none;
-    width: 125px;
+    width: 150px;
   }
   & iframe {
-    transform: translateX(-50%)
+    transform: translateX(-20%)
   }
 `;
 
 export const Category = styled.div`
   display: flex;
   align-items: center;
+  padding: 0.5rem;
   margin: 0 0 1rem 0;
   & div {
     width: 1.5rem;
@@ -29,5 +30,10 @@ export const Category = styled.div`
 
   & span {
     font-size: 1.25rem;
+  }
+  
+  :hover {
+    background: #33333322;
+    border-radius: 1rem;
   }
 `;
