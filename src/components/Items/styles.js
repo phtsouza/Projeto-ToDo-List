@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -10,19 +11,21 @@ export const Card = styled.div`
   width: 20rem;
   height: 10rem;
   background: var(--background-card);
-  padding: 1.25rem 1.25rem 3rem;
+  padding: 1.25rem;
   margin: 0 1rem 1rem;
   border-radius: 1rem;
   overflow-y: auto;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  
+  flex-direction: column;
 
   & .footer {
-    width: calc(100% - 2rem);
+    width: calc(100%);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: .5rem 0 0rem 0;
-    position: absolute;
   }
 
   & .checkbox {
