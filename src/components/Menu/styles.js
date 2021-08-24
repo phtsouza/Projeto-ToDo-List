@@ -11,7 +11,9 @@ export const Container = styled.div`
     width: 150px;
   }
   & iframe {
-    transform: translateX(-20%)
+    bottom: 0;
+    transform: translateX(-15%);
+    position: fixed;
   }
 `;
 
