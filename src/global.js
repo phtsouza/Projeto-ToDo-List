@@ -4,6 +4,7 @@ export const GlobalStyle = createGlobalStyle`
   :root {
     --background: #f0f2f5;
     --background-card: #FFDAB9;
+    --buttons: #69665c; 
     --check: #333;
     --blue: #5429CC;
     --blue-light: #9633FF;
@@ -16,6 +17,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
   }
 
   // front-size: 16px (Desktop)
