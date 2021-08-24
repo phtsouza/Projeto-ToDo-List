@@ -1,20 +1,4 @@
-const allItems = [
-    {
-      title: "Ir ao sacolão",
-      text: "Comprar pão, carne, salada, maçã, uva e café",
-      categories: [
-        {
-          color: "#FFD700",
-          title: "compras"
-        },
-        {
-            color: "#D8BFD8",
-            title: "escola"
-        }
-      ]
-    }
-]
-
+const allItems = []
 
 export default function itemsReducer(state = allItems, action) {
   switch (action.type) {
@@ -22,6 +6,8 @@ export default function itemsReducer(state = allItems, action) {
       return [...state, action.payload];
     case 'REMOVE_ITEM':
       return 0;
+    case 'INITIALIZE_ITEMS':
+      return action.payload;
     default:
       return state;
   }

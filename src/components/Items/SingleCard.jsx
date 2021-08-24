@@ -1,10 +1,20 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Check from "../Svgs/Check"
 import { Card, Title, Text, Categories, Colors } from './styles';
 
 export default function SingleCard({item, index}) {
 
   const [checkboxIsCheck, setCheckboxIsCheck] = useState(false);
+
+  useEffect(() => {
+    localStorage.getItem(`@check_${index}`) == "true" 
+    ? setCheckboxIsCheck(true)
+    : setCheckboxIsCheck(false);
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem("@check_"+index, checkboxIsCheck);
+  }, [checkboxIsCheck])
   
   function handleCheckbox() {
     setCheckboxIsCheck(!checkboxIsCheck);

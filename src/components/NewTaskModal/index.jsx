@@ -58,7 +58,7 @@ export default function NewTaskModal({isNewTaskModalOpen, setNewTaskModalOpen}) 
         <Menu>
           <CampInput>
             <label htmlFor="title">Título</label>
-            <input value={title} onChange={handleTitle} type="text" name="title" id="title" placeholder="adicione um título..."></input>
+            <input required value={title} onChange={handleTitle} type="text" name="title" id="title" placeholder="adicione um título..."></input>
           </CampInput>
           <CampInput>
             <label htmlFor="description">Descrição</label>
