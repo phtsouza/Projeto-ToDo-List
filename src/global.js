@@ -6,11 +6,7 @@ export const GlobalStyle = createGlobalStyle`
     --background-card: #FFDAB9;
     --buttons: #69665c; 
     --check: #333;
-    --blue: #5429CC;
-    --blue-light: #9633FF;
     --text-title: #363F5F;
-    --text-body: #969CB3;
-    --shape: #FFFFFF;
   }
 
   * {
@@ -22,6 +18,7 @@ export const GlobalStyle = createGlobalStyle`
 
   // front-size: 16px (Desktop)
   html {
+    
     @media (max-width: 1080px) {
       font-size: 93.75%; // 15px
     }
@@ -29,6 +26,7 @@ export const GlobalStyle = createGlobalStyle`
     @media (max-width: 720) {
       font-size: 87.5%; // 14px
     }
+
   }
   // REM = 1rem = 16px => sempre usaremos rem para responsividade
   
@@ -37,6 +35,21 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     font-family: 'Poppins', sans-serif;
   }
+
+  ::-webkit-scrollbar{
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track{
+      background-color: none;
+    }
+    ::-webkit-scrollbar-thumb{
+      background-color: #33333344;
+      border-radius: 20px;
+      transition: 1s all;
+    }
+    ::-webkit-scrollbar-thumb:hover{
+      background-color: #333;
+    }
 
   button {
     cursor: pointer;
@@ -70,7 +83,7 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const Content = styled.div`
-  max-width: 1120px;
+  max-width: 1300px;
   margin: 1.25rem auto 0;
   display: flex;
   align-items: flex-start;

@@ -5,7 +5,7 @@ export default function itemsReducer(state = allItems, action) {
     case 'ADD_ITEM':
       return [...state, action.payload];
     case 'REMOVE_ITEM':
-      return 0;
+      return action.payload;
     case 'INITIALIZE_ITEMS':
       return action.payload;
     default:

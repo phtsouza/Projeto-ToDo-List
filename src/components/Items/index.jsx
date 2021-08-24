@@ -16,13 +16,23 @@ export default function Item() {
   }, []);
 
   useEffect(() => {
-    setItems(allItems);
-    localStorage.setItem("@todo_items", JSON.stringify(allItems));
+    if(allItems) {
+      localStorage.setItem("@todo_items", JSON.stringify(allItems));
+      setItems(allItems);
+    }
   }, [allItems]);
 
   return (
     <Container>
-      {items.map((item, i) => <SingleCard key={i} index={i} item={item}/>)}
+      {items.map((item, i) => 
+        <SingleCard 
+          key={i} 
+          index={i} 
+          item={item}
+          dispatch={dispatch}
+          allItems={allItems}
+        />
+      )}
     </Container>
   );
 }

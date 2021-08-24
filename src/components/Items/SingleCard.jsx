@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
-import Check from "../Svgs/Check"
-import { Card, Title, Text, Categories, Colors } from './styles';
+import Check from "../Svgs/Check";
+import Delete from '../Svgs/Delete';
+import { useSelector, useDispatch } from "react-redux";
+import { Card, Title, Text, Categories, UserOptions, Colors } from './styles';
 
-export default function SingleCard({item, index}) {
+export default function SingleCard({item, index, dispatch, allItems}) {
 
   const [checkboxIsCheck, setCheckboxIsCheck] = useState(false);
 
@@ -19,6 +21,11 @@ export default function SingleCard({item, index}) {
   function handleCheckbox() {
     setCheckboxIsCheck(!checkboxIsCheck);
   } 
+
+  function handleDelete() {
+    let filtredItems = allItems.filter(it => it.title !== item.title);
+    dispatch({type: 'REMOVE_ITEM', payload: filtredItems})
+  }
   
   return (
     <Card>
@@ -29,12 +36,15 @@ export default function SingleCard({item, index}) {
           <Colors color={ct.color}></Colors>
         )}
         </Categories>
-        <label htmlFor={item.title + index} onClick={handleCheckbox} >
-          <div className={checkboxIsCheck ? "checkbox checked" : "checkbox"} checkboxIsCheck={checkboxIsCheck}>
-            <Check />
-          </div>
-        </label>
-        <input type="checkbox" name={item.title + index} id={item.title + index} /> 
+        <UserOptions>
+          <label htmlFor={item.title + index} onClick={handleCheckbox} >
+            <div className={checkboxIsCheck ? "checkbox checked" : "checkbox"} checkboxIsCheck={checkboxIsCheck}>
+              <Check />
+            </div>
+          </label>
+          <input type="checkbox" name={item.title + index} id={item.title + index} /> 
+          <Delete className="delete" onClick={handleDelete} />
+        </UserOptions>
       </div>
 
     </Card>

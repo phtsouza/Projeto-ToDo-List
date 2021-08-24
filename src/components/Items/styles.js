@@ -7,18 +7,22 @@ export const Container = styled.div`
 `;
 
 export const Card = styled.div`
-  max-width: 350px;
+  width: 20rem;
+  height: 10rem;
   background: var(--background-card);
-  padding: 1.25rem;
+  padding: 1.25rem 1.25rem 3rem;
   margin: 0 1rem 1rem;
   border-radius: 1rem;
+  overflow-y: auto;
   position: relative;
 
   & .footer {
+    width: calc(100% - 2rem);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: .5rem 0 0 0;
+    margin: .5rem 0 0rem 0;
+    position: absolute;
   }
 
   & .checkbox {
@@ -63,6 +67,21 @@ export const Text = styled.p`
 
 export const Categories = styled.div`
   display: flex;
+`;
+
+export const UserOptions = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & .delete {
+    transition: all .2s;
+    margin: 0 0 0 .2rem;
+    border-radius: .5rem;
+    :hover {
+      cursor: pointer;
+      background: #33333322;
+    }
+  }
 `;
 
 export const Colors = styled.div`
