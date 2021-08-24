@@ -29,8 +29,10 @@ export default function SingleCard({item, index, dispatch, allItems}) {
   
   return (
     <Card>
-      <Title checkboxIsCheck={checkboxIsCheck}>{item.title}</Title>
-      <Text checkboxIsCheck={checkboxIsCheck}>{item.text}</Text>
+      <div>
+        <Title checkboxIsCheck={checkboxIsCheck}>{item.title}</Title>
+        <Text checkboxIsCheck={checkboxIsCheck}>{item.text}</Text>
+      </div>
       <div className="footer">
         <Categories>{item.categories.map((ct, i) => 
           <Colors color={ct.color}></Colors>
