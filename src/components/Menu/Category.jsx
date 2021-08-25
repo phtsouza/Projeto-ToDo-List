@@ -4,13 +4,15 @@ import { useSelector, useDispatch } from "react-redux";
 export default function Category({color, ct}) {
   
   const categoriesSelected = useSelector((state) => state.selected);
+  const categoriesCurent = useSelector((state) => state.categories);
   const [categories, setCategories] = useState(categoriesSelected);
   const [isSelected, setIsSelected] = useState(false);
   const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   console.log(categoriesSelected)
-  // }, [categoriesSelected])
+  useEffect(() => {
+    console.log("t")
+    setIsSelected(false);
+  }, [categoriesCurent])
 
   useEffect(() => {
     if(isSelected)

@@ -11,12 +11,14 @@ export default function Item() {
   const [items, setItems] = useState(allItems);
 
   useEffect(() => {
-    const savedItems = JSON.parse(localStorage.getItem("@todo_items"));
-    dispatch({type: "INITIALIZE_ITEMS", payload: savedItems});
+    if(JSON.parse(localStorage.getItem("@todo_items"))) {
+      const savedItems = JSON.parse(localStorage.getItem("@todo_items"));
+      dispatch({type: "INITIALIZE_ITEMS", payload: savedItems});
+    }
   }, []);
 
   useEffect(() => {
-    if(allItems) {
+    if(allItems !== null) {
       localStorage.setItem("@todo_items", JSON.stringify(allItems));
       setItems(allItems);
     }
