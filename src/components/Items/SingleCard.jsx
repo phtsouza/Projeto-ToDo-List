@@ -9,13 +9,13 @@ export default function SingleCard({item, index, dispatch, allItems}) {
   const [checkboxIsCheck, setCheckboxIsCheck] = useState(false);
 
   useEffect(() => {
-    localStorage.getItem(`@check_${index}`) == "true" 
+    localStorage.getItem(`@check_${item.title+index}`) == "true" 
     ? setCheckboxIsCheck(true)
     : setCheckboxIsCheck(false);
   }, [])
 
   useEffect(() => {
-    localStorage.setItem("@check_"+index, checkboxIsCheck);
+    localStorage.setItem("@check_"+item.title+index, checkboxIsCheck);
   }, [checkboxIsCheck])
   
   function handleCheckbox() {
