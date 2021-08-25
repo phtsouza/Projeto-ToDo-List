@@ -6,9 +6,22 @@ export const Container = styled.div`
   align-items: space-between;
   justify-content: space-between;
   height: 80vh;
+
   & ul {
     list-style: none;
     width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & .button-add {
+    transition: all .2s ;
+    border-radius: .5rem;
+    :hover {
+      cursor: pointer;
+      background-color: #33333322;
+    }
+  }
   }
   & iframe {
     bottom: 0;
