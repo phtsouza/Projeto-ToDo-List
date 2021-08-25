@@ -3,7 +3,7 @@ export default function categoriesReducer(state = [], action) {
     case 'ADD_SELECTED_CATEGORY':
       return [...state, action.payload];
     case 'REMOVE_SELECTED_CATEGORY':
-      return 0;
+      return state.filter(ct => ct.title !== action.payload);
     default:
       return state;
   }

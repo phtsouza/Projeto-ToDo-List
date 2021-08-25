@@ -33,6 +33,10 @@ export default function Menu(){
     setIsOpenNewCategoryModal(true);
   }
 
+  function handleDelete() {    
+
+  }
+
   return (
     <Container>
       <ul>
@@ -43,7 +47,7 @@ export default function Menu(){
         </div>
         <div className="category-container">
           <Add onClick={handleOpenNewCategoryModal} className="button-add"/>
-          <Delete className="delete" onClick={() => console.log(categories, allCategories)} />
+          <Delete className="delete" onClick={handleDelete} />
         </div>
         <NewCategoryModal setIsOpenNewCategoryModal={setIsOpenNewCategoryModal} isOpenNewCategoryModal={isOpenNewCategoryModal} />
       </ul>

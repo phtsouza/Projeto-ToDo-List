@@ -63,7 +63,11 @@ export const CategoryContent = styled.div`
   }
 
   & span {
-    font-size: 1.25rem;
+    width: 6.4rem;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   
   :hover {
