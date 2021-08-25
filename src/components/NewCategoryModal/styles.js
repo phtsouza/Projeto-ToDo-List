@@ -61,10 +61,16 @@ export const CampInput = styled.div`
       background: #33333322;
     }
 
-    & #color {
+    & .container-color {
       width: 2rem;
       height: 2rem;
-      border-radius: 50%;
       background: ${props => props.color};
+      border-radius: 1rem;
+    }
+
+    & #color {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
     }
 `;

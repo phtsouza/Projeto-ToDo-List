@@ -5,23 +5,40 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: space-between;
   justify-content: space-between;
-  height: 80vh;
+  position: relative;
 
   & ul {
+    height: 50vh;
+    width: 12rem;
+    overflow-y: auto;
     list-style: none;
     width: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    & .button-add {
-    transition: all .2s ;
-    border-radius: .5rem;
-    :hover {
-      cursor: pointer;
-      background-color: #33333322;
+    & .category-container {
+      position: absolute;
+      bottom: 0;
+      transform: translateY(150%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-  }
+
+    & .button-add, & .delete {
+      transition: all .2s ;
+      border-radius: .5rem;
+      :hover {
+        cursor: pointer;
+        background-color: #33333322;
+      }
+    }
+
+    & .delete {
+      width: 2.2rem;
+      height: 2.2rem;
+    }
   }
   & iframe {
     bottom: 0;
@@ -30,11 +47,13 @@ export const Container = styled.div`
   }
 `;
 
-export const Category = styled.div`
+export const CategoryContent = styled.div`
+  border-radius: 1rem;
   display: flex;
   align-items: center;
   padding: 0.5rem;
   margin: 0 0 1rem 0;
+  background: ${props => props.isSelected ? "#33333315" : "none"};
   & div {
     width: 1.5rem;
     height: 1.5rem;
@@ -48,6 +67,7 @@ export const Category = styled.div`
   }
   
   :hover {
+    cursor: pointer;
     background: #33333322;
     border-radius: 1rem;
   }
