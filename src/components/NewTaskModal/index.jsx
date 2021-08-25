@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Modal from 'react-modal';
 import SingleCategory from './SingleCategory'
 import { Container, Header, Cancel, Add, Menu, CampInput, CampCategory } from './styles';
@@ -15,7 +15,9 @@ export default function NewTaskModal({isNewTaskModalOpen, setNewTaskModalOpen}) 
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState([]);
   
-
+  useEffect(() => {
+    setCategories(allCategories);
+  }, [allCategories]);
 
   function handleCloseNewTaskModal() {
     setNewTaskModalOpen(false);
@@ -65,7 +67,13 @@ export default function NewTaskModal({isNewTaskModalOpen, setNewTaskModalOpen}) 
             <textarea value={description} onChange={handleDescription} name="description" id="description" placeholder="adicione uma descrição..."></textarea>
           </CampInput>
           <CampCategory>
-            {categories.map((ct, i) => <SingleCategory setCategory={setCategory} categoryCurent={category} category={ct} key={i}/>)}
+            {categories !== null ? categories.map((ct, i) => 
+              <SingleCategory 
+              setCategory={setCategory} 
+              categoryCurent={category} 
+              category={ct} 
+              key={i}/>
+            ) : ""}
           </CampCategory>
         </Menu>
       </Container>
