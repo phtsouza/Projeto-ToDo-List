@@ -34,7 +34,8 @@ export default function Menu(){
   }
 
   function handleDelete() {    
-
+    dispatch({type: "INITIALIZE_CATEGORIES", payload: categories.filter(ct => !selectedCategories.some(sct => ct.title === sct.title))});
+    // setCategories(categories.filter(ct => !selectedCategories.some(sct => ct.title === sct.title)))
   }
 
   return (
