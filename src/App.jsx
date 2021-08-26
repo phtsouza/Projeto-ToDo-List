@@ -5,7 +5,8 @@ import Menu from "./components/Menu";
 import { createStore, combineReducers } from "redux";
 import categoriesReducer from "./components/reducers/categoriesReducer";
 import itemsReducer from "./components/reducers/itemsReducer";
-import selectedCategoriesReducer from "./components/reducers/selectedCategoriesReducer"
+import selectedCategoriesReducer from "./components/reducers/selectedCategoriesReducer";
+import hideTasksDoneReducer from "./components/reducers/hideTasksDoneReducer";
 import { Provider } from "react-redux";
 
 export default function App() {
@@ -13,7 +14,8 @@ export default function App() {
   const allReducers = combineReducers({
     categories: categoriesReducer,
     items: itemsReducer,
-    selected: selectedCategoriesReducer
+    selected: selectedCategoriesReducer,
+    hide: hideTasksDoneReducer,
   });
   const store = createStore(allReducers);
 

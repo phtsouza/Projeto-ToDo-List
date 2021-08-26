@@ -7,8 +7,20 @@ export const Container = styled.div`
   justify-content: space-between;
   position: relative;
 
+  & .hide-tasks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s ;
+    border-radius: .5rem;
+    :hover {
+      cursor: pointer;
+      background-color: #33333322;
+    }
+  }
+
   & ul {
-    height: 50vh;
+    height: 45vh;
     width: 12rem;
     overflow-y: auto;
     list-style: none;
@@ -24,6 +36,7 @@ export const Container = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
     }
 
     & .button-add, & .delete {
@@ -40,9 +53,9 @@ export const Container = styled.div`
       height: 2.2rem;
     }
   }
-  & iframe {
+  & img {
     bottom: 0;
-    transform: translateX(-15%);
+    transform: translateX(0%);
     position: fixed;
   }
 `;

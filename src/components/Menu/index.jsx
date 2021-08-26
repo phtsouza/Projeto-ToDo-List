@@ -1,16 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import NewCategoryModal from "../NewCategoryModal";
 import Category from "./Category";
 import { Container } from "./styles";
 import { useSelector, useDispatch } from "react-redux";
 import Add from "../Svgs/Add";
-import Delete from "../Svgs/Delete"
-import { useEffect } from "react";
+import Delete from "../Svgs/Delete";
+import Check from "../Svgs/Check";
+import Hide from "../Svgs/Hide";
+import Show from "../Svgs/Show"
 
 export default function Menu(){
 
   const allCategories = useSelector((state) => state.categories);
   const selectedCategories = useSelector((state) => state.selected);
+  const hideTasksDone = useSelector((state) => state.hide);
   const dispatch = useDispatch();
   const [categories, setCategories] = useState(allCategories);
   const [isOpenNewCategoryModal, setIsOpenNewCategoryModal] = useState(false); 
@@ -38,8 +41,19 @@ export default function Menu(){
     // setCategories(categories.filter(ct => !selectedCategories.some(sct => ct.title === sct.title)))
   }
 
+  function handleHideTaksDone() {
+    if(hideTasksDone) 
+      dispatch({type: "HIDE"});
+    else 
+      dispatch({type: "SHOW"});
+  }
+
+  useEffect(() => {
+    console.log("HIDE TASKS: ", hideTasksDone);
+  }, [hideTasksDone])
+
   return (
-    <Container>
+    <Container checkboxIsCheck={hideTasksDone}>
       <ul>
         <div>
           {categories !== null ? categories.map((ct, i) => 
@@ -47,12 +61,17 @@ export default function Menu(){
           ) : ""}
         </div>
         <div className="category-container">
-          <Add onClick={handleOpenNewCategoryModal} className="button-add"/>
-          <Delete className="delete" onClick={handleDelete} />
+          <div className="user-actions">
+            <Add onClick={handleOpenNewCategoryModal} className="button-add"/>
+            <Delete className="delete" onClick={handleDelete} />
+          </div>
+            <div onClick={handleHideTaksDone} className="hide-tasks">
+              {hideTasksDone ? <Show /> : <Hide />}
+            </div>
         </div>
         <NewCategoryModal setIsOpenNewCategoryModal={setIsOpenNewCategoryModal} isOpenNewCategoryModal={isOpenNewCategoryModal} />
       </ul>
-      <iframe src="https://giphy.com/embed/l29PIblmcraLOowHnR" width="200" height="200" frameBorder="0" />
+      <img src="/assets/giphy.gif" width="150" height="150" />
     </Container>
     
   );

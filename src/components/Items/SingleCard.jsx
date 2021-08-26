@@ -7,6 +7,7 @@ import { Card, Title, Text, Categories, UserOptions, Colors } from './styles';
 export default function SingleCard({item, index, dispatch, allItems}) {
 
   const [checkboxIsCheck, setCheckboxIsCheck] = useState(false);
+  const hideTasksDone = useSelector((state) => state.hide);
 
   useEffect(() => {
     localStorage.getItem(`@check_${item.title+index}`) == "true" 
@@ -23,12 +24,14 @@ export default function SingleCard({item, index, dispatch, allItems}) {
   } 
 
   function handleDelete() {
+    setCheckboxIsCheck(false);
+    localStorage.removeItem(`@check_${item.title+index}`);
     let filtredItems = allItems.filter(it => it.title !== item.title);
     dispatch({type: 'REMOVE_ITEM', payload: filtredItems})
   }
   
   return (
-    <Card>
+    <Card hideTasksDone={hideTasksDone} checkboxIsCheck={checkboxIsCheck}>
       <div>
         <Title checkboxIsCheck={checkboxIsCheck}>{item.title}</Title>
         <Text checkboxIsCheck={checkboxIsCheck}>{item.text}</Text>

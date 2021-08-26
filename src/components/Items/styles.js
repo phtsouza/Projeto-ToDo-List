@@ -16,9 +16,8 @@ export const Card = styled.div`
   border-radius: 1rem;
   overflow-y: auto;
   position: relative;
-  display: flex;
+  display: ${props => props.checkboxIsCheck && props.hideTasksDone ? "none" : "flex"};
   justify-content: space-between;
-  
   flex-direction: column;
 
   & .footer {
