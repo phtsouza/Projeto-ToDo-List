@@ -3,7 +3,7 @@
 ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 # <p align="center">Todo List</p>
 
-<h2>Inicializar projeto</h2> Para começar o projeto execute o comando yarn start.
+<h2>Inicializar projeto</h2> Para começar o projeto execute o comando yarn install depois yarn start.
 <h2>Descrição</h2> Projeto de uma lista de tarefas, pelo qual é possível criar e excluir tarefas, adicionar e remover
 tags, além de um filtro para mostrar ou não as tarefas que estão marcadas como feitas.
 <h4>Status do projeto: ✅Finalizado.</h4>
