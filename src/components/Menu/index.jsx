@@ -71,7 +71,7 @@ export default function Menu(){
         </div>
         <NewCategoryModal setIsOpenNewCategoryModal={setIsOpenNewCategoryModal} isOpenNewCategoryModal={isOpenNewCategoryModal} />
       </ul>
-      <img src="/assets/giphy.gif" width="150" height="150" />
+      <img src="./assets/giphy.gif" width="150" height="150" />
     </Container>
     
   );
