@@ -1,14 +1,24 @@
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
 ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
-# <p align="center">Todo List</p>
+<div align="center"><img width="200" src="./public/assets/todo.svg" alt="todo logo"></div>
+<div align="center">
+    <a href="#inicializar">Inicializar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#descricao">Descrição</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#funcionalidades">Funcionalidades</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#contribuidores">Contribuidores</a>
+</div>
 
-<h2>Inicializar projeto</h2> Para começar o projeto execute o comando yarn install depois yarn start.
-<h2>Descrição</h2> Projeto de uma lista de tarefas, pelo qual é possível criar e excluir tarefas, adicionar e remover
-tags, além de um filtro para mostrar ou não as tarefas que estão marcadas como feitas.
+<br>
+<h2 id="inicializar">Inicializar projeto</h2> Para começar o projeto execute o comando yarn install depois yarn start.
+<h2 id="descricao">Descrição</h2>
+<p> Projeto de uma lista de tarefas, pelo qual é possível criar e excluir tarefas, adicionar e remover
+tags, além de um filtro para mostrar ou não as tarefas que estão marcadas como feitas.</p>
+<p>Este é um projeto totalmente desenvolvido em ReactJS, com o intuito de estudo.</p>
 <h4>Status do projeto: ✅Finalizado.</h4>
 
-## Funcionalidades
+
+<h2 id="funcionalidades">Funcionalidades</h2>
 
 <ul>
   <li>
@@ -29,7 +39,7 @@ tags, além de um filtro para mostrar ou não as tarefas que estão marcadas com
   </li>
 </ul>
 
-## Contribuidores
+<h2 id="contribuidores">Contribuidores</h2>
 <table>
   <tr>
     <td align="center">
