@@ -29,3 +29,24 @@ tags, além de um filtro para mostrar ou não as tarefas que estão marcadas com
   </li>
 </ul>
 
+## Contribuidores
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/davidsonmarra">
+        <img src="https://github.com/davidsonmarra.png?size=100" width="100px;" alt="Davidson Marra"/><br>
+        <sub>
+          <b>Davidson Marra</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/phtsouza">
+        <img src="https://github.com/phtsouza.png?size=100" width="100px;" alt="Pedro Teixeira"/><br>
+        <sub>
+          <b>Pedro Teixeira</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
