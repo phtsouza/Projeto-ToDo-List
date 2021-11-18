@@ -9,6 +9,17 @@
     <a href="#contribuidores">Contribuidores</a>
 </div>
 
+<br><br>
+
+<div align="center">
+    <img width="750px" src="./public/assets/todo-banner.png">
+</div>
+<h3 align="center">
+      <a href="https://davidsonmarra.github.io/todo/">
+        <img  src="https://img.shields.io/badge/-ACCESS%20THE%20PROJECT-FFDAB9?&style=for-the-badge&logoColor=fff"/>
+      </a>
+</h3>
+
 <br>
 <h2 id="inicializar">Inicializar projeto</h2> Para começar o projeto execute o comando yarn install depois yarn start.
 <h2 id="descricao">Descrição</h2>
