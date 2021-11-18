@@ -19,11 +19,6 @@ export default function NewCategoryModal({setIsOpenNewCategoryModal, isOpenNewCa
       setTitle(ev.target.value);
     }
 
-    function handleColor(ev) {
-      console.log(ev.target.value);
-      setColor(ev.target.value);
-    }
-
     function handleSubmit(ev) {
       ev.preventDefault();
       const newCategory = {
